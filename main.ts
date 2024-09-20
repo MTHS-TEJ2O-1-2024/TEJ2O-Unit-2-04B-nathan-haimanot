@@ -2,16 +2,21 @@
  *
  * Created by: Nathan Haimanot
  * Created on: Sep 2024
- * This program simulates a 6 sided dice
-*/
+ * This program tells the temperature
+ */
+let temperature = input.temperature()
 
-// our variable for a random number
-let randomNumber: number
+
 
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-input.onButtonPressed(Button.A, function () {
-randomNumber = randint(1, 6)
-basic.showNumber(randomNumber)
+input.onButtonPressed(Button.A, function (){
+temperature = input.temperature()
+
+
+basic.showString('the temperature is')
+basic.showNumber(temperature)
+
+
 })
